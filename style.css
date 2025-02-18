@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+.form-box {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: none;
+}
+.form-box.active{
+    display: block;
+}
+.form-box h2 {
+    margin-bottom: 15px;
+}
+.form-box input  {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.form-box select{
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.form-box button {
+    width: 100%;
+    padding: 10px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.form-box button:hover {
+    background: #218838;
+}
+.form-box p {
+    margin-top: 10px;
+}
+.form-box a {
+    color: #007bff;
+    text-decoration: none;
+}
+.form-box a:hover {
+    text-decoration: underline;
+}
+
+.error-message{
+    padding: 12px;
+    background: antiquewhite;
+    border-radius: 6px;
+    font-size: 16px;
+color: red;
+text-align: center;
+margin-bottom: 20px;
+
+}
+
+h1{
+    font-size: 20px;
+}
+span{
+    color: #007bff;
+}
+.box p{
+    font-size: 22px;
+}
+.box button{
+    display: block;
+    width: 300px;
+    margin: 0 auto;
+}

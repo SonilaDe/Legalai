@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saved Legal Cases</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 2rem;
+        }
+
+        .container {
+            width: 80%;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #003366;
+        }
+
+        .case-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .case-item {
+            background-color: #e9f5ff;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Saved Legal Cases
+    </header>
+    
+    <div class="container">
+        <h2>Your Saved Cases:</h2>
+        <ul class="case-list" id="caseList">
+            <!-- Case list will be populated here -->
+        </ul>
+    </div>
+
+    <script>
+        // Function to display saved cases from localStorage
+        function displaySavedCases() {
+            const caseList = document.getElementById('caseList');
+            caseList.innerHTML = ""; // Clear any existing cases
+
+            for (let i = 0; i < localStorage.length; i++) {
+                const caseNumber = localStorage.key(i);
+                const caseData = localStorage.getItem(caseNumber);
+
+                // Create a list item for each saved case
+                const listItem = document.createElement('li');
+                listItem.classList.add('case-item');
+                listItem.innerHTML = `<strong>${caseNumber}</strong><pre>${caseData}</pre>`;
+                caseList.appendChild(listItem);
+            }
+        }
+
+        // Display saved cases when the page loads
+        window.onload = displaySavedCases;
+    </script>
+</body>
+</html>
