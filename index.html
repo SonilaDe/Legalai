@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lawfeed - Law Firm</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+   
+.faq-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    text-align: left;
+    background-color: #f1f1f1;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #ddd;
+}
+
+.faq-answer {
+    display: none;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-left: 3px solid #ccc;
+}
+
+.faq-answer p {
+    margin: 0;
+}
+
+        header {
+            background-color: white;
+            padding: 15px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            margin-left: auto;
+        }
+        .nav-links li {
+            display: inline;
+        }
+        .nav-links li a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+        .nav-links li a:hover {
+            color: gray;
+        }
+        .nav-buttons {
+            display: flex;
+            align-items: center;
+            margin-left: 30px;
+        }
+        .btn-outline {
+            border: 1px solid black;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 25px;
+            color: black;
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+        .btn-outline:hover {
+            background: black;
+            color: white;
+        }
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 120px 10% 50px;
+            background: url('R.jpg') no-repeat center center/cover;
+            height: 500px;
+            color: white;
+        }
+        .hero-content {
+            max-width: 50%;
+        }
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .about {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 100px 10%;
+            background-color: white;
+            font-family: 'Times New Roman', serif;
+        }
+        .about h2 {
+            font-size: 28px;
+            text-transform: uppercase;
+           
+            letter-spacing: 1.5px;
+            color: #666;
+            flex: 1;
+            font-family: "Josefin Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+            text-align: left;
+        }
+        .about-content {
+            flex: 2;
+            text-align: right;
+            font-size: 24px;
+            font-weight: bold;
+            line-height: 1.5;
+        }
+        .about .btn-outline {
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 16px;
+            padding: 12px 20px;
+            border-radius: 50px;
+        }
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                height: auto;
+                padding-bottom: 30px;
+            }
+            .hero-content, .hero-image {
+                max-width: 100%;
+            }
+            .hero-buttons {
+                justify-content: center;
+            }
+            .nav-links {
+                display: none;
+            }
+            .about {
+                flex-direction: column;
+                text-align: center;
+            }
+            .about h2, .about-content {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">LAWFEED</div>
+            <ul class="nav-links">
+                <li><a href="#">The Firm</a></li>
+                <li><a href="#">Practice Areas</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Resources</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <a href="#" class="btn-outline">Let’s Talk ↗</a>
+            </div>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Experienced lawyers are ready to help</h1>
+            <p>Our lawyers are enthusiastic, committed, and flexible.</p>
+            <a href="#" class="btn-outline">Let’s Talk ↗</a>
+        </div>
+    </section>
+    
+    <section class="about" id="about-text">
+        <h2>About Us</h2>
+        <div class="about-content">
+            <p>Lawfeed is a USA multi-service law firm, full of dynamic and intelligent people. We operate with a defined quality management system to ensure excellence.</p>
+        </div>
+    </section>
+
+        <div class="faq-container">
+            <h2>FAQ</h2>
+            <div class="faq-item">
+                <button class="faq-question">Can I get started with Catase for free?</button>
+                <div class="faq-answer">
+                    <p>Try Loremipsum for free for 30 days, no credit card required. Get started with a free Business trial, then follow the on-screen instructions to log in.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">How can I get started quickly creating an UI design project in Catase?</button>
+                <div class="faq-answer">
+                    <p>Here is how you can get started quickly in Catase: ...</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Is Catase a scalable UI design solution?</button>
+                <div class="faq-answer">
+                    <p>Yes, Catase is designed to scale for larger UI design projects. ...</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Can I use Catase to report progress on UI leads?</button>
+                <div class="faq-answer">
+                    <p>Yes, you can use Catase's reporting tools to track progress on UI leads.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">What third party integrations are available to support our Catase UI design?</button>
+                <div class="faq-answer">
+                    <p>Catase supports various integrations with third-party platforms, including ...</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Can I use you as a free Catase app for my business?</button>
+                <div class="faq-answer">
+                    <p>Yes, you can use the free trial of Catase for your business.</p>
+                </div>
+            </div>
+        </div>
+    
+    
+
+    
+    <script>
+        ScrollReveal().reveal('.hero h1, .hero p, .hero .btn-outline', { delay: 300, origin: 'bottom', distance: '50px', duration: 1000, easing: 'ease-in-out' });
+        ScrollReveal().reveal('.about h2', { delay: 500, origin: 'left', distance: '50px', duration: 1000, easing: 'ease-in-out' });
+        ScrollReveal().reveal('.about-content', { delay: 700, origin: 'right', distance: '50px', duration: 1000, easing: 'ease-in-out' });
+    
+    
+        const faqQuestions = document.querySelectorAll('.faq-question');
+
+faqQuestions.forEach(question => {
+    question.addEventListener('click', () => {
+        const answer = question.nextElementSibling;
+        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+    });
+});
+
+    
+    </script>
+</body>
+</html>
+
